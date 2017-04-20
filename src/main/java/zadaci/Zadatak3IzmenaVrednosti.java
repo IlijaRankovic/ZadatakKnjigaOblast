@@ -15,7 +15,7 @@ public class Zadatak3IzmenaVrednosti {
         ConnectionSource conn = null;
 
         try {
-            conn = new JdbcConnectionSource("jdb:sqlite:knjigaOblast.db");
+            conn = new JdbcConnectionSource("jdbc:sqlite:knjigaOblast.db");
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {

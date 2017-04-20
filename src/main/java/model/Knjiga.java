@@ -3,12 +3,14 @@ package model;
 import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
+import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.Date;
 
 /**
  * Created by androiddevelopment on 20.4.17..
  */
+@DatabaseTable(tableName = "knjiga")
 public class Knjiga {
 
     public static final String POLJE_NASLOV = "naslov";

@@ -18,12 +18,12 @@ public class Zadatak1KreiranjeTabela {
         ConnectionSource conn = null;
 
         try {
-            conn = new JdbcConnectionSource("jdb:sqlite:knjigaOblast.db");
+            conn = new JdbcConnectionSource("jdbc:sqlite:knjigaOblast.db");
             TableUtils.dropTable(conn, Oblast.class, true);
             TableUtils.dropTable(conn, Knjiga.class, true);
 
-            TableUtils.clearTable(conn, Knjiga.class);
-            TableUtils.clearTable(conn, Oblast.class);
+            TableUtils.createTable(conn, Knjiga.class);
+            TableUtils.createTable(conn, Oblast.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {

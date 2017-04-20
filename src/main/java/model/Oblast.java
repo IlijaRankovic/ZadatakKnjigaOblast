@@ -1,10 +1,12 @@
 package model;
 
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 /**
  * Created by androiddevelopment on 20.4.17..
  */
+@DatabaseTable(tableName = "oblast")
 public class Oblast {
 
     public static final String POLJE_NAZIV = "naziv";
